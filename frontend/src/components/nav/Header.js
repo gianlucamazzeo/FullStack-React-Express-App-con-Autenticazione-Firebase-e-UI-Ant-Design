@@ -46,7 +46,7 @@ const Header = () => {
             style: {float: 'left', display: 'block'}
         },
         {
-          label: 'Username',
+          label: user  ? user.email.split("@")[0] : 'Username',
           key: 'username',
           icon: <SettingOutlined />,
           

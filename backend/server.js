@@ -7,7 +7,7 @@ const {readdirSync} = require("fs");
 require("dotenv").config();
 
 // import routes
-//const authRoutes = require("./routes/auth");
+const authRoutes = require("./routes/auth");
 
 // app
 const app = express();
@@ -16,7 +16,7 @@ const app = express();
 mongoose
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true
   })
   .then(() => console.log("DB CONNECTED!"))
   .catch((err) => console.log(`DB CONNECTION ERR ${err}`));
@@ -26,10 +26,8 @@ app.use(morgan("dev"));
 app.use(bodyParser.json({ limit: "2mb" }));
 app.use(cors());
 
-// route middleware
-readdirSync("./routes").map((r) =>
-  app.use("/api", require("./routes/" + r))
-);
+// routes middleware
+readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
 
 // port
 const port = process.env.PORT || 8000;
