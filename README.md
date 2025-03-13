@@ -1,6 +1,5 @@
 # FullStack React-Express App con Autenticazione Firebase e UI Ant Design
 
-Ecco una versione migliorata e più dettagliata della descrizione:
 
 Questa applicazione web utilizza un'architettura moderna e robusta, combinando un frontend React con la libreria UI Ant Design (Antd) per un'interfaccia utente elegante e reattiva. Il backend è basato su Express.js, un framework Node.js popolare e flessibile, che gestisce le API per l'interazione con il database MongoDB.
 
